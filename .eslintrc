@@ -1,0 +1,17 @@
+{
+    "env": {
+        "browser": true,
+        "node": true
+    },
+
+    "globals": {
+        "React": true
+    },
+
+    "ecmaFeatures": {
+        "jsx": true
+    },
+
+    "plugins": [ "babel", "react", "react-native", "jsx-a11y", "import" ],
+    "extends": "airbnb"
+}
