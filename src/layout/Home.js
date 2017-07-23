@@ -1,22 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-// actions
-import ping from '../actions/users';
-// comonents
+// components
 import H1 from '../components/headings/h1';
 import Button from '../components/buttons'
 
-const Home = ({ isPinging, ping }) => (
+const Home = ({ isPinging }) => (
   <div>
     <H1 isPinging={isPinging.toString()} />
-    <Button onClick={ping}>Start PING</Button>
+    <Button btnText="Start Ping" />
   </div>
 );
 
 Home.propTypes = {
   isPinging: PropTypes.bool.isRequired,
-  ping : PropTypes.func.isRequired
 };
 
 Home.defaultTypes = {
@@ -25,5 +22,4 @@ Home.defaultTypes = {
 
 export default connect(
   ({ isPinging }) => ({ isPinging }),
-  { ping },
 )(Home);
