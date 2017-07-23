@@ -1,9 +1,11 @@
 import React  from 'react';
-import {Route, IndexRoute} from 'react-router';
-import App from './components/App'
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Home from './layouts/Home'
 
-export default (
-  <Route path="/" component={App}>
-    <IndexRoute component={App}></IndexRoute>
-  </Route>
+const Routes = () => (
+  <Router>
+    <Route path="/" component={Home} />
+  </Router>
 );
+
+export default Routes;

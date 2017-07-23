@@ -1,9 +1,10 @@
 import React from 'react';
-import Home from './layout/Home'
+import Routes from './route';
+
 import './App.css';
 
 const App = () => (
-  <Home />
+  <Routes />
 );
 
 export default App;
