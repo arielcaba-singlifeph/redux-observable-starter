@@ -15,8 +15,9 @@
     "plugins": [ "babel", "react", "jsx-a11y", "import" ],
 
     "extends": ["airbnb", "eslint:recommended", "plugin:react/recommended"],
-    
+
     "rules": {
       "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+      "react/forbid-prop-types": [1, { "forbid": ["any"] }]
     }
 }
