@@ -12,6 +12,11 @@
         "jsx": true
     },
 
-    "plugins": [ "babel", "react", "react-native", "jsx-a11y", "import" ],
-    "extends": "airbnb"
+    "plugins": [ "babel", "react", "jsx-a11y", "import" ],
+
+    "extends": ["airbnb", "eslint:recommended", "plugin:react/recommended"],
+    
+    "rules": {
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    }
 }
