@@ -2,6 +2,8 @@
  * action creators
  */
 
-import { PING } from '../constants/actionTypes.js';
+import { PING } from '../constants/actionTypes';
 
-export const ping = () => ({ type: PING });
+const ping = () => ({ type: PING });
+
+export default ping;

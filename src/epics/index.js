@@ -1,6 +1,8 @@
-import { PING,  PONG } from '../constants/actionTypes.js';
+import { PING, PONG } from '../constants/actionTypes';
 
-export const pingEpic = action$ =>
+const pingEpic = action$ =>
   action$.ofType(PING)
     .delay(1000) // Asynchronously wait 1000ms then continue
     .mapTo({ type: PONG });
+
+export default pingEpic;

@@ -5,17 +5,15 @@ import 'rxjs';
 import App from './App';
 import store from './store';
 
-class Index extends React.Component {
-  render() {
-    return (
-      <Provider store={store}>
-        <App />
-      </Provider>
-    );
-  }
-}
+const Index = () => {
+  return (
+    <Provider store={store} >
+      <App />
+    </Provider>
+  );
+};
 
 ReactDOM.render(
   <Index />,
-  document.getElementById('root')
+  document.getElementById('root'),
 );

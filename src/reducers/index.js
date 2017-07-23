@@ -1,4 +1,4 @@
-import { PING,  PONG } from '../constants/actionTypes.js';
+import { PING, PONG } from '../constants/actionTypes';
 
 export default (state = { isPinging: false }, action) => {
   switch (action.type) {

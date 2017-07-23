@@ -1,13 +1,29 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { ping } from './actions/users.js';
-import './App.css';
+// actions
+import ping from '../actions/users';
+// comonents
+import H1 from '../components/headings/h1';
+import Button from '../components/buttons'
 
-let App = ({ isPinging = false, ping }) => (
+const Home = ({ isPinging, ping }) => (
   <div>
-    <h1>is pinging: { String(isPinging) }</h1>
-    <button onClick={ping}>Start PING</button>
+    <H1 isPinging={isPinging.toString()} />
+    <Button onClick={ping}>Start PING</Button>
   </div>
 );
 
-export default Home
+Home.propTypes = {
+  isPinging: PropTypes.bool.isRequired,
+  ping : PropTypes.func.isRequired
+};
+
+Home.defaultTypes = {
+  isPinging: false
+}
+
+export default connect(
+  ({ isPinging }) => ({ isPinging }),
+  { ping },
+)(Home);

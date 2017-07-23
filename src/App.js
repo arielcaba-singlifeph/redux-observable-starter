@@ -1,18 +1,9 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { ping } from './actions/users.js';
+import Home from './layout/Home'
 import './App.css';
 
-let App = ({ isPinging = false, ping }) => (
-  <div>
-    <h1>is pinging: { String(isPinging) }</h1>
-    <button onClick={ping}>Start PING</button>
-  </div>
+const App = () => (
+  <Home />
 );
-
-App = connect(
-  ({ isPinging }) => ({ isPinging }),
-  { ping }
-)(App);
 
 export default App;
